@@ -75,7 +75,9 @@ while (eleccion != "0"){
     
     } 
 
+    if (montoTotal && descripcionPedido !=""){
     alert(`Su pedido fue finalizado, su valor final es de $${montoTotal} \n\nDetalle de su compra: \n${descripcionPedido}`)
+    } else {alert(`No se ha realizado ninguna compra.\n`)}
     return 0;
 } 
 
@@ -95,6 +97,8 @@ function vaciarCarrito() {
     respuestaVaciar = prompt(`¿Esta seguro de querer eliminar todos los articulos de su carrito? \n Ingrese SI o NO`).toLowerCase();
         if (respuestaVaciar === "si"){
             carrito = [];
+            descripcionPedido = "";
+            montoTotal="";
             alert("Su pedido fue eliminado, puede continuar con su compra.");
             solicitarPedido();
         } else if (respuestaVaciar === "no"){
@@ -105,6 +109,8 @@ function vaciarCarrito() {
 }
 
 function verCarrito() {
+    if (montoTotal && descripcionPedido !=""){
     mostrarCarritoUsuario = alert(`Usted ha seleccionado:\n\n${descripcionPedido} \n\n Valor: ${montoTotal}`)
+    } else {alert(`No se han seleccionado productos.`)}
     solicitarPedido();
 }
