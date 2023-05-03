@@ -75,7 +75,7 @@ while (eleccion != "0"){
     
     } 
 
-    alert(`Su pedido fue finalizado, su valor final es de $${montoTotal} \n\n ${descripcionPedido}`)
+    alert(`Su pedido fue finalizado, su valor final es de $${montoTotal} \n\nDetalle de su compra: \n${descripcionPedido}`)
     return 0;
 } 
 
@@ -105,6 +105,6 @@ function vaciarCarrito() {
 }
 
 function verCarrito() {
-    mostrarCarritoUsuario = alert(`Usted ha seleccionado: \n\n ${descripcionPedido} \n\n Valor: ${montoTotal}`)
+    mostrarCarritoUsuario = alert(`Usted ha seleccionado:\n\n${descripcionPedido} \n\n Valor: ${montoTotal}`)
     solicitarPedido();
 }
